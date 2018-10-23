@@ -3,7 +3,8 @@ package com.paulinemaxime.rpg.entities.living;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tactfactory.spacetravel.entity.Gear;
+import com.paulinemaxime.rpg.entities.living.Perso;
+
 
 
 public class Hero extends Perso {
