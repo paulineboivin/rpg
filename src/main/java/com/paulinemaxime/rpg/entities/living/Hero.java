@@ -5,11 +5,14 @@ import java.util.List;
 
 import com.paulinemaxime.rpg.entities.living.Perso;
 
-
-
 public class Hero extends Perso {
-	private String name;
-	private int pointVie;
-	private int pointAction;
-
+	public String getName(){
+		return name;
+	}
+	public int getPv(){
+		return pv;
+	}
+	public int getPa(){
+		return pa;
+	}
 }
