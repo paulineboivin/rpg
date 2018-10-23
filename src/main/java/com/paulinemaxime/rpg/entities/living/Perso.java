@@ -6,4 +6,5 @@ public abstract class Perso {
 	protected int pa;
 	
 	
+	
 }

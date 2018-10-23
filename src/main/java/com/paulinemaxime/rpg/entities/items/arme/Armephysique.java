@@ -3,13 +3,8 @@ package com.paulinemaxime.rpg.entities.items.arme;
 import com.paulinemaxime.rpg.entities.items.Armes;
 
 public class Armephysique extends Armes {
-	public String getName(){
-		return name;
+	public Armephysique(int degat, int pa, String name) {
+		super(degat, pa, name);
 	}
-	public int detDegat(){
-		return degat;
-	}
-	public int getPa(){
-		return pa;
-	}
+	
 }

@@ -15,4 +15,7 @@ public class Hero extends Perso {
 	public int getPa(){
 		return pa;
 	}
+	
+	
+	
 }
