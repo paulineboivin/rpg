@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_HOXLwNdpEeibVq8UoZOIig" name="Rpg">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_HeX9sNdpEeibVq8UoZOIig">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_X4zv0NdpEeibVq8UoZOIig" name="Rpg">
+      <packagedElement xmi:type="uml:Package" xmi:id="_X76uMNdpEeibVq8UoZOIig" name="com">
+        <packagedElement xmi:type="uml:Package" xmi:id="_X778UNdpEeibVq8UoZOIig" name="paulinemaxime">
+          <packagedElement xmi:type="uml:Package" xmi:id="_X79KcNdpEeibVq8UoZOIig" name="rpg">
+            <packagedElement xmi:type="uml:Class" xmi:id="_haNNkNdpEeibVq8UoZOIig" name="Application" visibility="public">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_haceINdpEeibVq8UoZOIig" name="main" specification="_haSGENdpEeibVq8UoZOIig">
+                <language>JAVA</language>
+                <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    System.out.println(&quot;Hello&quot;);&#xD;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_haSGENdpEeibVq8UoZOIig" name="main" visibility="public" isStatic="true" method="_haceINdpEeibVq8UoZOIig">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_haWXgNdpEeibVq8UoZOIig" name="args" type="_X8Kl0NdpEeibVq8UoZOIig">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_haao8NdpEeibVq8UoZOIig"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_habQANdpEeibVq8UoZOIig" value="*"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_EfoCsNdrEeibVq8UoZOIig" name="Main"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_hahWoNdpEeibVq8UoZOIig" name="entities">
+              <packagedElement xmi:type="uml:Package" xmi:id="_hajL0NdpEeibVq8UoZOIig" name="classes">
+                <packagedElement xmi:type="uml:Interface" xmi:id="_hamPINdpEeibVq8UoZOIig" name="ClasseRpg" visibility="public">
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_haoEUNdpEeibVq8UoZOIig" name="getArmorRestriction" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hap5gNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_harusNdpEeibVq8UoZOIig" name="getWeaponRestriction" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hawnMNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_ha6YMNdpEeibVq8UoZOIig" name="fight" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_ha80cNdpEeibVq8UoZOIig" name="perso" type="_ha2GwNdpEeibVq8UoZOIig"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hbF-YNdpEeibVq8UoZOIig" name="isEquipable" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hblGkNdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hboJ4NdpEeibVq8UoZOIig" name="arme" type="_hbEJMNdpEeibVq8UoZOIig"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hbsbUNdpEeibVq8UoZOIig" name="isEquipable" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hbuQgNdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hbxT0NdpEeibVq8UoZOIig" name="armure" type="_hbrNMNdpEeibVq8UoZOIig"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Interface" xmi:id="_hb0-MNdpEeibVq8UoZOIig" name="Paladin" visibility="public"/>
+                <packagedElement xmi:type="uml:Interface" xmi:id="_hb4BgNdpEeibVq8UoZOIig" name="Barbare" visibility="public"/>
+                <packagedElement xmi:type="uml:Interface" xmi:id="_hb7r4NdpEeibVq8UoZOIig" name="Magicien" visibility="public"/>
+                <packagedElement xmi:type="uml:Package" xmi:id="_hb_WQNdpEeibVq8UoZOIig" name="defauts">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hcCZkNdpEeibVq8UoZOIig" name="DefaultPaladin" visibility="public">
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hcJHQNdpEeibVq8UoZOIig" name="DefaultPaladin implements ClasseRpg" client="_hcCZkNdpEeibVq8UoZOIig" supplier="_hamPINdpEeibVq8UoZOIig" contract="_hamPINdpEeibVq8UoZOIig"/>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hcMKkNdpEeibVq8UoZOIig" name="DefaultPaladin implements Paladin" client="_hcCZkNdpEeibVq8UoZOIig" supplier="_hb0-MNdpEeibVq8UoZOIig" contract="_hb0-MNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hcRDENdpEeibVq8UoZOIig" name="getArmorRestriction" specification="_hcN_wNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hcWioNdpEeibVq8UoZOIig" name="getWeaponRestriction" specification="_hcTfUNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hcfskNdpEeibVq8UoZOIig" name="fight" specification="_hcaNANdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+// TODO Auto-generated method stub&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hcqEoNdpEeibVq8UoZOIig" name="isEquipable" specification="_hclMINdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hc0csNdpEeibVq8UoZOIig" name="isEquipable" specification="_hctvANdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hcN_wNdpEeibVq8UoZOIig" name="getArmorRestriction" visibility="public" method="_hcRDENdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hcP08NdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hcTfUNdpEeibVq8UoZOIig" name="getWeaponRestriction" visibility="public" method="_hcWioNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hcVUgNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hcaNANdpEeibVq8UoZOIig" name="fight" visibility="public" method="_hcfskNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hcdQUNdpEeibVq8UoZOIig" name="perso" type="_ha2GwNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hclMINdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_hcqEoNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hcnBUNdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hco2gNdpEeibVq8UoZOIig" name="arme" type="_hbEJMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hctvANdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_hc0csNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hcvkMNdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hcyAcNdpEeibVq8UoZOIig" name="armure" type="_hbrNMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hc7KYNdpEeibVq8UoZOIig" name="DefaultMagicien" visibility="public">
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hc8YgNdpEeibVq8UoZOIig" name="DefaultMagicien implements ClasseRpg" client="_hc7KYNdpEeibVq8UoZOIig" supplier="_hamPINdpEeibVq8UoZOIig" contract="_hamPINdpEeibVq8UoZOIig"/>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hc9moNdpEeibVq8UoZOIig" name="DefaultMagicien implements Magicien" client="_hc7KYNdpEeibVq8UoZOIig" supplier="_hb7r4NdpEeibVq8UoZOIig" contract="_hb7r4NdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hdCfINdpEeibVq8UoZOIig" name="getArmorRestriction" specification="_hc-0wNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hdKa8NdpEeibVq8UoZOIig" name="getWeaponRestriction" specification="_hdE7YNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hdPTcNdpEeibVq8UoZOIig" name="fight" specification="_hdM3MNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+// TODO Auto-generated method stub&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hdWBINdpEeibVq8UoZOIig" name="isEquipable" specification="_hdRvsNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hddV4NdpEeibVq8UoZOIig" name="isEquipable" specification="_hdZEcNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hc-0wNdpEeibVq8UoZOIig" name="getArmorRestriction" visibility="public" method="_hdCfINdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdAp8NdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hdE7YNdpEeibVq8UoZOIig" name="getWeaponRestriction" visibility="public" method="_hdKa8NdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdGwkNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hdM3MNdpEeibVq8UoZOIig" name="fight" visibility="public" method="_hdPTcNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdOFUNdpEeibVq8UoZOIig" name="perso" type="_ha2GwNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hdRvsNdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_hdWBINdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdS90NdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdUzANdpEeibVq8UoZOIig" name="arme" type="_hbEJMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hdZEcNdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_hddV4NdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdaSkNdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdcHwNdpEeibVq8UoZOIig" name="armure" type="_hbrNMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hdhnUNdpEeibVq8UoZOIig" name="DefaultBarbare" visibility="public">
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hdi1cNdpEeibVq8UoZOIig" name="DefaultBarbare implements ClasseRpg" client="_hdhnUNdpEeibVq8UoZOIig" supplier="_hamPINdpEeibVq8UoZOIig" contract="_hamPINdpEeibVq8UoZOIig"/>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hdkqoNdpEeibVq8UoZOIig" name="DefaultBarbare implements Barbare" client="_hdhnUNdpEeibVq8UoZOIig" supplier="_hb4BgNdpEeibVq8UoZOIig" contract="_hb4BgNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hdrYUNdpEeibVq8UoZOIig" name="getArmorRestriction" specification="_hdmf0NdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hd1JUNdpEeibVq8UoZOIig" name="getWeaponRestriction" specification="_hduboNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hd9FINdpEeibVq8UoZOIig" name="fight" specification="_hd5awNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+// TODO Auto-generated method stub&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_heFoANdpEeibVq8UoZOIig" name="isEquipable" specification="_heAvgNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_heLuoNdpEeibVq8UoZOIig" name="isEquipable" specification="_heIEQNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // TODO Auto-generated method stub&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hdmf0NdpEeibVq8UoZOIig" name="getArmorRestriction" visibility="public" method="_hdrYUNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdpjINdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hduboNdpEeibVq8UoZOIig" name="getWeaponRestriction" visibility="public" method="_hd1JUNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hdyGANdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hd5awNdpEeibVq8UoZOIig" name="fight" visibility="public" method="_hd9FINdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hd7P8NdpEeibVq8UoZOIig" name="perso" type="_ha2GwNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_heAvgNdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_heFoANdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_heCksNdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_heEZ4NdpEeibVq8UoZOIig" name="arme" type="_hbEJMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_heIEQNdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_heLuoNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_heJSYNdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_heKggNdpEeibVq8UoZOIig" name="armure" type="_hbrNMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_heQAENdpEeibVq8UoZOIig" name="DefaultFighter" visibility="public">
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_heROMNdpEeibVq8UoZOIig" name="DefaultFighter implements ClasseRpg" client="_heQAENdpEeibVq8UoZOIig" supplier="_hamPINdpEeibVq8UoZOIig" contract="_hamPINdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_heU4kNdpEeibVq8UoZOIig" name="getArmorRestriction" specification="_heScUNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_heZxENdpEeibVq8UoZOIig" name="getWeaponRestriction" specification="_heXU0NdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    return null;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hef3sNdpEeibVq8UoZOIig" name="fight" specification="_hec0YNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_helXQNdpEeibVq8UoZOIig" name="isEquipable" specification="_hehs4NdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hessANdpEeibVq8UoZOIig" name="isEquipable" specification="_henzgNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    return false;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_heScUNdpEeibVq8UoZOIig" name="getArmorRestriction" visibility="public" method="_heU4kNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_heTqcNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_heXU0NdpEeibVq8UoZOIig" name="getWeaponRestriction" visibility="public" method="_heZxENdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_heYi8NdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hec0YNdpEeibVq8UoZOIig" name="fight" visibility="public" method="_hef3sNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_heeCgNdpEeibVq8UoZOIig" name="perso" type="_ha2GwNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hehs4NdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_helXQNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hei7ANdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hekJINdpEeibVq8UoZOIig" name="arme" type="_hbEJMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_henzgNdpEeibVq8UoZOIig" name="isEquipable" visibility="public" method="_hessANdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hepBoNdpEeibVq8UoZOIig" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_herd4NdpEeibVq8UoZOIig" name="armure" type="_hbrNMNdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                </packagedElement>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_ha0RkNdpEeibVq8UoZOIig" name="living">
+                <packagedElement xmi:type="uml:Class" xmi:id="_ha2GwNdpEeibVq8UoZOIig" name="Perso" visibility="public" isAbstract="true">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_hhoEMNdpEeibVq8UoZOIig" name="name" visibility="protected" type="_X8Kl0NdpEeibVq8UoZOIig" isUnique="false"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_hhp5YNdpEeibVq8UoZOIig" name="pv" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_hhsVoNdpEeibVq8UoZOIig" name="pa" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedAttribute>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_hhUiMNdpEeibVq8UoZOIig" name="Monstre" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_hhVwUNdpEeibVq8UoZOIig" general="_ha2GwNdpEeibVq8UoZOIig"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hhaBwNdpEeibVq8UoZOIig" name="getName" specification="_hhW-cNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return name;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hheTMNdpEeibVq8UoZOIig" name="getPv" specification="_hhb28NdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return pv;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hhjywNdpEeibVq8UoZOIig" name="getPa" specification="_hhgvcNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return pa;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hhW-cNdpEeibVq8UoZOIig" name="getName" visibility="public" method="_hhaBwNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hhYMkNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hhb28NdpEeibVq8UoZOIig" name="getPv" visibility="public" method="_hheTMNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hhdFENdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hhgvcNdpEeibVq8UoZOIig" name="getPa" visibility="public" method="_hhjywNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hhikoNdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_hhxOINdpEeibVq8UoZOIig" name="Hero" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_hhycQNdpEeibVq8UoZOIig" general="_ha2GwNdpEeibVq8UoZOIig"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hh370NdpEeibVq8UoZOIig" name="getName" specification="_hh04gNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return name;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hh80UNdpEeibVq8UoZOIig" name="getPv" specification="_hh6YENdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return pv;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hiEJENdpEeibVq8UoZOIig" name="getPa" specification="_hh_QkNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return pa;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hh04gNdpEeibVq8UoZOIig" name="getName" visibility="public" method="_hh370NdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hh2tsNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hh6YENdpEeibVq8UoZOIig" name="getPv" visibility="public" method="_hh80UNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hh7mMNdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hh_QkNdpEeibVq8UoZOIig" name="getPa" visibility="public" method="_hiEJENdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hiBs0NdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_ha_3wNdpEeibVq8UoZOIig" name="items">
+                <packagedElement xmi:type="uml:Class" xmi:id="_hbEJMNdpEeibVq8UoZOIig" name="Armes" visibility="public" isAbstract="true">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_hfR60NdpEeibVq8UoZOIig" name="degat" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_hfTwANdpEeibVq8UoZOIig" name="pa" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_hfWMQNdpEeibVq8UoZOIig" name="name" visibility="protected" type="_X8Kl0NdpEeibVq8UoZOIig" isUnique="false"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hfjAkNdpEeibVq8UoZOIig" name="Armes" specification="_hfZPkNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    this.degat = degat;&#xD;
+    this.pa = pa;&#xD;
+    this.name = name;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hfmq8NdpEeibVq8UoZOIig" name="getDegat" specification="_hfk1wNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return degat;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hfrjcNdpEeibVq8UoZOIig" name="getPa" specification="_hfpuQNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return pa;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hfwb8NdpEeibVq8UoZOIig" name="getName" specification="_hft_sNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return name;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hfZPkNdpEeibVq8UoZOIig" name="Armes" visibility="public" method="_hfjAkNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfevINdpEeibVq8UoZOIig" name="degat">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hff9QNdpEeibVq8UoZOIig" name="pa">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfhLYNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hfk1wNdpEeibVq8UoZOIig" name="getDegat" visibility="public" method="_hfmq8NdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hflc0NdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hfpuQNdpEeibVq8UoZOIig" name="getPa" visibility="public" method="_hfrjcNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfqVUNdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hft_sNdpEeibVq8UoZOIig" name="getName" visibility="public" method="_hfwb8NdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfvN0NdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_hbrNMNdpEeibVq8UoZOIig" name="Armure" visibility="public" isAbstract="true">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_heyyoNdpEeibVq8UoZOIig" name="pArmure" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_he118NdpEeibVq8UoZOIig" name="name" visibility="protected" type="_X8Kl0NdpEeibVq8UoZOIig" isUnique="false"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hfEfcNdpEeibVq8UoZOIig" name="Armure" specification="_he6ucNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    this.pArmure = pArmure;&#xD;
+    this.name = name;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hfIw4NdpEeibVq8UoZOIig" name="getpArmure" specification="_hfGUoNdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return pArmure;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hfNCUNdpEeibVq8UoZOIig" name="getName" specification="_hfKmENdpEeibVq8UoZOIig">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return name;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_he6ucNdpEeibVq8UoZOIig" name="Armure" visibility="public" method="_hfEfcNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfBcINdpEeibVq8UoZOIig" name="pArmure">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfDRUNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hfGUoNdpEeibVq8UoZOIig" name="getpArmure" visibility="public" method="_hfIw4NdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfHiwNdpEeibVq8UoZOIig" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_hfKmENdpEeibVq8UoZOIig" name="getName" visibility="public" method="_hfNCUNdpEeibVq8UoZOIig">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_hfL0MNdpEeibVq8UoZOIig" type="_X8Kl0NdpEeibVq8UoZOIig" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_hfzfQNdpEeibVq8UoZOIig" name="arme">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hf1UcNdpEeibVq8UoZOIig" name="Armemixte" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_hf2ikNdpEeibVq8UoZOIig" general="_hbEJMNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hgBhsNdpEeibVq8UoZOIig" name="Armemixte" specification="_hf4XwNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(degat, pa, name);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hf4XwNdpEeibVq8UoZOIig" name="Armemixte" visibility="public" method="_hgBhsNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hf8pMNdpEeibVq8UoZOIig" name="degat">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hf93UNdpEeibVq8UoZOIig" name="pa">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hgATkNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_dTTlcNdwEeibVq8UoZOIig" name="Operation4"/>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hgElANdpEeibVq8UoZOIig" name="Armephysique" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_hgFzINdpEeibVq8UoZOIig" general="_hbEJMNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hgSncNdpEeibVq8UoZOIig" name="Armephysique" specification="_hgHoUNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(degat, pa, name);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hgHoUNdpEeibVq8UoZOIig" name="Armephysique" visibility="public" method="_hgSncNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hgMg0NdpEeibVq8UoZOIig" name="degat">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hgOWANdpEeibVq8UoZOIig" name="pa">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hgQLMNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hgWR0NdpEeibVq8UoZOIig" name="Armemagique" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_hgYHANdpEeibVq8UoZOIig" general="_hbEJMNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hgliYNdpEeibVq8UoZOIig" name="Armemagique" specification="_hgajQNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(degat, pa, name);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hgajQNdpEeibVq8UoZOIig" name="Armemagique" visibility="public" method="_hgliYNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hghQ8NdpEeibVq8UoZOIig" name="degat">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hgifENdpEeibVq8UoZOIig" name="pa">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hgkUQNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_hgolsNdpEeibVq8UoZOIig" name="armure">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hgrB8NdpEeibVq8UoZOIig" name="Armuremixte" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_hgs3INdpEeibVq8UoZOIig" general="_hbrNMNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hg5EYNdpEeibVq8UoZOIig" name="Armuremixte" specification="_hgvTYNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(pArmure, name);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hgvTYNdpEeibVq8UoZOIig" name="Armuremixte" visibility="public" method="_hg5EYNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hg1aANdpEeibVq8UoZOIig" name="pArmure">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hg3PMNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hg8HsNdpEeibVq8UoZOIig" name="Armuremagique" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_hg9V0NdpEeibVq8UoZOIig" general="_hbrNMNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hhFRoNdpEeibVq8UoZOIig" name="Armuremagique" specification="_hg984NdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(pArmure, name);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hg984NdpEeibVq8UoZOIig" name="Armuremagique" visibility="public" method="_hhFRoNdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hhCOUNdpEeibVq8UoZOIig" name="pArmure">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hhEDgNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_hhIU8NdpEeibVq8UoZOIig" name="Armurephysique" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_hhJjENdpEeibVq8UoZOIig" general="_hbrNMNdpEeibVq8UoZOIig"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hhRe4NdpEeibVq8UoZOIig" name="Armurephysique" specification="_hhLYQNdpEeibVq8UoZOIig">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(pArmure, name);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_hhLYQNdpEeibVq8UoZOIig" name="Armurephysique" visibility="public" method="_hhRe4NdpEeibVq8UoZOIig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hhPCoNdpEeibVq8UoZOIig" name="pArmure">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hhQQwNdpEeibVq8UoZOIig" name="name" type="_X8Kl0NdpEeibVq8UoZOIig"/>
+                    </ownedOperation>
+                  </packagedElement>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_X8FtUNdpEeibVq8UoZOIig" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_X8HigNdpEeibVq8UoZOIig" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_X8JXsNdpEeibVq8UoZOIig" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_X8Kl0NdpEeibVq8UoZOIig" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_X6IlgNdpEeibVq8UoZOIig">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X6MP4NdpEeibVq8UoZOIig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_X7JSINdpEeibVq8UoZOIig">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X7KgQNdpEeibVq8UoZOIig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_X7LuYNdpEeibVq8UoZOIig">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X7OKoNdpEeibVq8UoZOIig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_X8WzENdpEeibVq8UoZOIig" name="java.lang.String" base_Classifier="_X8Kl0NdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_he_m8NdpEeibVq8UoZOIig" base_BehavioralFeature="_he6ucNdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_hfcS4NdpEeibVq8UoZOIig" base_BehavioralFeature="_hfZPkNdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_hf60ANdpEeibVq8UoZOIig" base_BehavioralFeature="_hf4XwNdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_hgKroNdpEeibVq8UoZOIig" base_BehavioralFeature="_hgHoUNdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_hgdmkNdpEeibVq8UoZOIig" base_BehavioralFeature="_hgajQNdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_hgxvoNdpEeibVq8UoZOIig" base_BehavioralFeature="_hgvTYNdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_hhBAMNdpEeibVq8UoZOIig" base_BehavioralFeature="_hg984NdpEeibVq8UoZOIig"/>
+  <standard:Create xmi:id="_hhNNcNdpEeibVq8UoZOIig" base_BehavioralFeature="_hhLYQNdpEeibVq8UoZOIig"/>
+</xmi:XMI>

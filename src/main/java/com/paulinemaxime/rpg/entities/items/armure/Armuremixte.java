@@ -3,8 +3,8 @@ package com.paulinemaxime.rpg.entities.items.armure;
 import com.paulinemaxime.rpg.entities.items.Armure;
 
 public class Armuremixte extends Armure {
-	public Armuremixte(int pArmure, String name) {
-		super(pArmure, name);
+	public Armuremixte(String name, int pArmure) {
+		super(name, pArmure);
 	}
 	
 }

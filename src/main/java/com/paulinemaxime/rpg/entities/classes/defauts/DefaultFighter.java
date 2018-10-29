@@ -27,7 +27,7 @@ public class DefaultFighter implements ClasseRpg {
 
 	@Override
 	public boolean isEquipable(Armes arme) {
-		//arme.getDegat
+		
 		return false;
 	}
 
