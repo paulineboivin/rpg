@@ -64,7 +64,7 @@ public class Menu {
 
     private ArrayList<String> constructChoice() {
         ArrayList<String> result = new ArrayList<>();
-        if (choices.size() >= 4) {
+        if (choices.size() >= 40) {
 
             for (int i = 0; i < choices.size(); i = i+2) {
                 if ((choices.get(i).getTitle().length() + choices.get(i).getTitle().length()) < (MAX_WIDTH - 31)) {

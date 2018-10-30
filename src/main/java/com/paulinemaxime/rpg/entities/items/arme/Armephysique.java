@@ -4,7 +4,7 @@ import com.paulinemaxime.rpg.entities.items.Armes;
 
 public class Armephysique extends Armes {
 	public Armephysique(String name, int degat, int pa) {
-		super(degat, pa, name);
+		super(name, degat, pa);
 	}
 
 }
