@@ -28,6 +28,7 @@ public class DAOManager<T extends DBItem> {
 		
 		parser(dto, result, request, stmt);
 		
+		
 		return result;
 	}
 	
