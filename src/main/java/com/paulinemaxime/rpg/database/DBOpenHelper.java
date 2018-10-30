@@ -7,13 +7,12 @@ import java.sql.SQLException;
 
 public class DBOpenHelper {
 
-		/** Constructeur privé */
+		
 	    private DBOpenHelper()
 	    {
-	    	
 	    	MysqlDataSource dataSource = new MysqlDataSource();
-	    	dataSource.setUser("pauline.boivin");
-			dataSource.setPassword("root");
+	    	dataSource.setUser("root");
+			dataSource.setPassword("");
 			dataSource.setServerName("127.0.0.1");
 			dataSource.setDatabaseName("databaserpg");
 			try {

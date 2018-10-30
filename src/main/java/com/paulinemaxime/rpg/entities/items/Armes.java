@@ -1,8 +1,8 @@
 package com.paulinemaxime.rpg.entities.items;
 
+import com.paulinemaxime.rpg.database.DBItem;
 
-
-public abstract class Armes {
+public abstract class Armes extends DBItem{
 	protected int degat;
 	protected int pa;
 	protected String name;
@@ -25,14 +25,6 @@ public abstract class Armes {
 		return name;
 	}
 	
-}
-
-
-
-
-
-
-
 }
 
 

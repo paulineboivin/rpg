@@ -2,6 +2,8 @@ package com.paulinemaxime.rpg.database.dto;
 
 import java.sql.ResultSet;
 
+import com.paulinemaxime.rpg.entities.items.Armure;
+
 
 public class ArmureDTO implements DTO<Armure> {
 

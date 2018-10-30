@@ -1,7 +1,6 @@
 package com.paulinemaxime.rpg.database.contract;
 
-public class Contract {
-
+public interface Contract {
 
 	String getTable();
 	String[] getFields();

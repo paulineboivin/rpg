@@ -1,9 +1,10 @@
 package com.paulinemaxime.rpg.entities.items;
 
-public abstract class Armure {
+import com.paulinemaxime.rpg.database.DBItem;
+
+public abstract class Armure extends DBItem {
 	protected int pArmure;
 	protected String name;
-
 
 	
 	public Armure(int pArmure, String name) {
