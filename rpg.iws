@@ -2,29 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="971218dd-6e32-4ab1-b0f1-a9559395a8e0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/Barbare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/ClasseRpg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/Magicien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/Paladin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultBarbare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultFighter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultMagicien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultPaladin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armemagique.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armemixte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armephysique.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armuremagique.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armuremixte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/items/Armurephysique.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/living/Hero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/living/Monstre.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulinemaxime/rpg/entities/living/Perso.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/AdvancedConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Choice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Print.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rpg.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/rpg.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg.iws" beforeDir="false" afterPath="$PROJECT_DIR$/rpg.iws" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -77,30 +61,12 @@
     <ui_properties converted="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Armuremixte.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/items/armure/Armuremixte.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Armurephysique.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/items/armure/Armurephysique.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClasseRpg.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ClasseRpg.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/ClasseRpg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="345">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,11 +74,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Paladin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/Paladin.java">
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvancedConsole.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/AdvancedConsole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Print.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Print.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Choice.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Choice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -135,23 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultFighter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultFighter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DefaultPaladin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultPaladin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -160,10 +144,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultMagicien.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -172,10 +153,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultBarbare.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -205,6 +183,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultMagicien.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultBarbare.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/ClasseRpg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/Menu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Menu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Choice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/AdvancedConsole.java" />
       </list>
     </option>
   </component>
@@ -242,9 +224,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,6 +258,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rpg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rpg" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpg" type="b2602c69:ProjectViewProjectNode" />
@@ -328,10 +318,20 @@
               <item name="entities" type="462c0819:PsiDirectoryNode" />
               <item name="living" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="rpg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rpg" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,7 +343,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../interstelar" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -418,11 +418,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540235313752</updated>
       <workItem from="1540235314770" duration="931000" />
+      <workItem from="1540895144899" duration="820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="931000" />
+    <option name="totallyTimeSpent" value="1751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -430,32 +431,33 @@
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="6" />
       <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Run" order="6" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Gradle" order="1" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="right" id="Commander" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="right" id="Palette " order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,6 +471,79 @@
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/items/armure/Armuremixte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/items/armure/Armurephysique.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/Paladin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/Barbare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/Magicien.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultFighter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultPaladin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="51" lean-forward="true" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultMagicien.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="51" lean-forward="true" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultBarbare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="51" lean-forward="true" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/ClasseRpg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/items/arme/Armemagique.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -513,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultFighter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="759">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -542,27 +617,28 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultPaladin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultMagicien.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/defauts/DefaultBarbare.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -571,11 +647,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/entities/classes/ClasseRpg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="345">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Choice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/AdvancedConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paulinemaxime/rpg/utils/console/Print.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
