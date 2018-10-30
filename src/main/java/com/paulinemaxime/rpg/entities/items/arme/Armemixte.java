@@ -1,7 +1,9 @@
 package com.paulinemaxime.rpg.entities.items.arme;
 
 
-public class Armemixte extends Arme {
+import com.paulinemaxime.rpg.entities.items.Armes;
+
+public class Armemixte extends Armes {
 	public Armemixte(String name, int degat, int pa) {
 		// TODO Auto-generated constructor stub
 		super(name, degat, pa);

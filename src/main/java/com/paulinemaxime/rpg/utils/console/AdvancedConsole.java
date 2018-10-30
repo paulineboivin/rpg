@@ -38,4 +38,8 @@ public class AdvancedConsole {
         return new Menu();
     }
 
+    public Menu createMenu(String name) { return new Menu(name); }
+
+    public Menu createMenu(String name, String description) { return new Menu(name, description); }
+
 }

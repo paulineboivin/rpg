@@ -7,7 +7,7 @@ public abstract class Armure extends DBItem {
 	protected String name;
 
 	
-	public Armure(int pArmure, String name) {
+	public Armure(String name, int pArmure) {
 		this.pArmure = pArmure;
 		this.name = name;
 	}

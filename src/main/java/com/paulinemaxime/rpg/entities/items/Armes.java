@@ -7,7 +7,7 @@ public abstract class Armes extends DBItem{
 	protected int pa;
 	protected String name;
 	
-	public Armes(int degat, int pa, String name) {
+	public Armes(String name, int degat, int pa) {
 		this.degat = degat;
 		this.pa = pa;
 		this.name = name;
