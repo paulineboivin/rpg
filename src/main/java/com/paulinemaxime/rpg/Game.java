@@ -20,6 +20,7 @@ public class Game {
     private AdvancedConsole cmd;
     private ScannerProvider scanner;
     private ArrayList<Hero> team = new ArrayList<>();
+    private Monstre monstre = null;
 
     public Game() {
         init();
@@ -28,17 +29,19 @@ public class Game {
     public void init() {
         cmd = AdvancedConsole.getInstance();
         scanner = ScannerProvider.getInstance();
-        createDonjon();
+        createTeam();
+        //createDonjon();
+        attaqueDonjon();
     }
 
     public void defineHero() {
 
         cmd.print("Choisissez un nom pour votre Hero :");
-        String name = scanner.getScanner().nextLine();
-        cmd.print("Donnez lui un nombre de point de vie :");
-        int pv = scanner.getScanner().nextInt();
-        cmd.print("Donnez lui un nombre de point d'attaque :");
-        int pa = scanner.getScanner().nextInt();
+        String name = scanner.getScanner().next();
+        cmd.print("Donnez lui un nombre de point de vie ( min : 1 | max : 1000) :");
+        int pv = cmd.verifInputInt(1,1000);
+        cmd.print("Donnez lui un nombre de point d'attaque (min : 1 | max : 15) :");
+        int pa = cmd.verifInputInt(1,15);
 
         Menu menu = cmd.createMenu();
         menu.addDescription("Choisissez la classe de votre hero :");
@@ -55,14 +58,14 @@ public class Game {
 
     public Monstre defineMonster() {
 
-        Monstre monstre = null;
-    	
+        monstre = null;
+
     	cmd.print("Choisissez un nom pour votre Monstre :");
-        String name = scanner.getScanner().nextLine();
-        cmd.print("Donnez lui un nombre de point de vie :");
-        int pv = scanner.getScanner().nextInt();
-        cmd.print("Donnez lui un nombre de point d'attaque :");
-        int pa = scanner.getScanner().nextInt();
+        String name = scanner.getScanner().next();
+        cmd.print("Donnez lui un nombre de point de vie (min : 1 | max : 5000) :");
+        int pv = cmd.verifInputInt(1,5000);
+        cmd.print("Donnez lui un nombre de point d'attaque (min : 1 | max : 15) :");
+        int pa = cmd.verifInputInt(1,15);
 
         Menu menu = cmd.createMenu();
         menu.addDescription("Choisissez la classe de votre Monstre :");
@@ -99,34 +102,42 @@ public class Game {
 
     public void createTeam() {
         cmd.print("Combien de héro voulez-vous créer ? (maximum 10) :");
-        int nbr;
-        do {
-            nbr = scanner.getScanner().nextInt();
-        } while (nbr > 10 || nbr <= 0);
+        int nbr = cmd.verifInputInt(0,10);
         for (int i=0; i < nbr; i++) {
+            cmd.print("Hero : "+(i+1)+"/"+nbr);
             defineHero();
         }
     }
 
     public void createDonjon() {
         cmd.print("Combien voulez-vous d'étages à votre donjon ? (maximum 5) :");
-        int nbr;
-        do {
-            nbr = scanner.getScanner().nextInt();
-        } while (nbr <= 0 || nbr > 5);
+        int nbr = cmd.verifInputInt(0,5);
         cmd.print("Combien de monstre voulez-vous par étage ? (maximum 10) :");
-        int monstres;
-        do {
-            monstres = scanner.getScanner().nextInt();
-        } while (monstres <= 0 || monstres > 10);
+        int nbr_monstre = cmd.verifInputInt(0,10);
         Donjon dj = new Donjon();
         for (int i=0; i < nbr; i++) {
             Etage etage = new Etage();
-            for (int j=0; j < monstres; j++) {
+            for (int j=0; j < nbr_monstre; j++) {
+                cmd.print("Etage : "+(i+1)+"/"+nbr+" | Monstre : "+(j+1)+"/"+nbr_monstre);
                 etage.addMonstre(defineMonster());
             }
             dj.addEtage(etage);
         }
+    }
+
+    public void attaqueDonjon() {
+        cmd.print("Vous attaquez le Donjon !");
+        for (Hero hero: team) {
+            choixAction(hero);
+        }
+    }
+
+    private void choixAction(Hero hero) {
+        Menu menu = cmd.createMenu();
+        menu.addDescription("Choisissez l'action à effectuer pour le hero -> "+hero.getName()+" :");
+        menu.addChoice("Attaquer", ()-> { cmd.print("Attaque !"); return  null; });
+        menu.addChoice("Defendre", ()-> { cmd.print("Defense !"); return  null; });
+        menu.print();
     }
 
 }

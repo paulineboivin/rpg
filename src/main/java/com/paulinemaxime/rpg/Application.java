@@ -11,9 +11,8 @@ public class Application {
 	 */
 	public static void main(String[] args) {
 
-		DBOpenHelper bdd = DBOpenHelper.getInstance();
-		bdd.getConn();
-		//new Game();
+
+		new Game();
 
 	}
 

@@ -7,7 +7,7 @@ import com.paulinemaxime.rpg.entities.living.Monstre;
 public class Etage {
 
 	
-	private ArrayList<Monstre> monstre;
+	private ArrayList<Monstre> monstre = new ArrayList<>();
 	private int nombreMonstres;
 	
 	public ArrayList<Monstre> getMonstres() {

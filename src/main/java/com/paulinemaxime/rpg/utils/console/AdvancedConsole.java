@@ -1,8 +1,13 @@
 package com.paulinemaxime.rpg.utils.console;
 
+import com.paulinemaxime.rpg.utils.ScannerProvider;
+
+import java.util.Scanner;
+
 public class AdvancedConsole {
 
     private static AdvancedConsole instance = null;
+    private final Scanner scanner = ScannerProvider.getInstance().getScanner();
     public static final int MAX_WIDTH = 100;
 
     private Print print;
@@ -41,5 +46,13 @@ public class AdvancedConsole {
     public Menu createMenu(String name) { return new Menu(name); }
 
     public Menu createMenu(String name, String description) { return new Menu(name, description); }
+
+    public int verifInputInt(int min, int max) {
+        int result = 0;
+        do {
+            result = scanner.nextInt();
+        } while ( result < min || result > max );
+        return result;
+    }
 
 }
