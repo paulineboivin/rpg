@@ -6,6 +6,7 @@ import com.paulinemaxime.rpg.entities.classes.defauts.DefaultMagicien;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultPaladin;
 import com.paulinemaxime.rpg.entities.items.arme.Armemagique;
 import com.paulinemaxime.rpg.entities.living.Hero;
+import com.paulinemaxime.rpg.entities.living.Monstre;
 import com.paulinemaxime.rpg.utils.ScannerProvider;
 import com.paulinemaxime.rpg.utils.console.AdvancedConsole;
 import com.paulinemaxime.rpg.utils.console.Menu;
@@ -48,17 +49,43 @@ public class Game {
     }
 
     public void defineMonster() {
+    	
+    	cmd.print("Choisissez un nom pour votre Monstre :");
+        String name = scanner.getScanner().nextLine();
+        cmd.print("Donnez lui un nombre de point de vie :");
+        int pv = scanner.getScanner().nextInt();
+        cmd.print("Donnez lui un nombre de point d'attaque :");
+        int pa = scanner.getScanner().nextInt();
 
+        Menu menu = cmd.createMenu();
+        menu.addDescription("Choisissez la classe de votre Monstre :");
+        int choice = 1;
+        menu.addChoice("Monstre basic", ()-> { new Monstre(name, pv, pa, new DefaultFighter()); return null;} );
+        menu.addChoice("Barbare", ()-> { new Monstre(name, pv, pa, new DefaultBarbare()); return null;} );
+        menu.addChoice("Magicien", ()-> { new Monstre(name, pv, pa, new DefaultMagicien()); return null;} );
+        menu.addChoice("Paladin", ()-> { new Monstre(name, pv, pa, new DefaultPaladin()); return null;} );
+
+        menu.print();
+        cmd.print("Votre monstre a bien été créé !");
     }
 
     public void menuSelectWeapon(Hero hero) {
 
-        Menu menu = cmd.createMenu("SÃ©lection arme Hero", "SÃ©lectionner une arme pour votre Hero :");
+        Menu menu = cmd.createMenu("Selection arme Hero", "Sélectionner une arme pour votre Hero :");
+    }
+    
+    public void menuSelectWeapon(Monstre monstre) {
 
-
-
+        Menu menu = cmd.createMenu("Selection arme Monstre", "Sélectionner une arme pour votre Monstre :");
     }
 
-    public void menuSelectArmor() {}
+    public void menuSelectArmor(Hero hero) {
+    	Menu exemple = cmd.createMenu();
+    	exemple.addName("Nom du menu");
+    	exemple.addDescription("Choisissez le choix qui vous convient :");
+    	exemple.addChoice("choix 1", ()-> {System.out.println(" "); return null;} );
+    }
+    
+    public void menuSelectArmor(Monstre monstre) {}
 
 }
