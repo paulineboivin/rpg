@@ -74,7 +74,7 @@ public class DAOManager<T extends DBItem> {
 	}
 	
 	// the mysql insert statement https://alvinalexander.com/java/java-mysql-insert-example-preparedstatement
-    String query = " insert into users (first_name, last_name, date_created, is_admin, num_points)"
+    String query = " insert into databaserpg(first_name, last_name, date_created, is_admin, num_points)"
       + " values (?, ?, ?, ?, ?)";
 	
 }
