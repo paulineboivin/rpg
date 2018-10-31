@@ -1,8 +1,6 @@
 package com.paulinemaxime.rpg.entities.living;
 
-
 import com.paulinemaxime.rpg.entities.classes.ClasseRpg;
-import com.paulinemaxime.rpg.entities.living.Perso;
 
 public class Hero extends Perso {
 

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.paulinemaxime.rpg.entities.living.Monstre;
 
 public class Etage {
+
 	
 	private ArrayList<Monstre> monstre;
 	private int nombreMonstres;
@@ -24,4 +25,5 @@ public class Etage {
 	public void addMonstre(Monstre monstre) {
 		this.monstre.add(monstre);
 	}
+
 }

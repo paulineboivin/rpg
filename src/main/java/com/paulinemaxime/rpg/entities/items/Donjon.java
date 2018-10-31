@@ -1,12 +1,12 @@
 package com.paulinemaxime.rpg.entities.items;
 
 import java.util.ArrayList;
-
+	
 public class Donjon {
-
+	
 	private ArrayList<Etage> etage;
 	private int nombreEtages; 
-
+	
 	public ArrayList<Etage> getEtages() {
 		return etage;
 	}
@@ -23,3 +23,5 @@ public class Donjon {
 		this.etage.add(etage);
 	}
 }
+
+

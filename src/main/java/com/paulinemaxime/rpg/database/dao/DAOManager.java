@@ -12,7 +12,11 @@ import com.paulinemaxime.rpg.database.dto.DTO;
 
 
 public class DAOManager<T extends DBItem> {
-	
+
+	public DAOManager() {
+
+	}
+
 	public ArrayList<T> selectAll(Contract contract, DTO<T> dto) {
 		ArrayList<T> result = new ArrayList<T>();
 		
