@@ -4,12 +4,13 @@ package com.paulinemaxime.rpg.utils.console;
 import com.paulinemaxime.rpg.utils.ScannerProvider;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.function.Supplier;
 
 public class Menu {
 
     private static final Print print = Print.getInstance();
-    private static final ScannerProvider scanner = ScannerProvider.getInstance();
+    private static final Scanner scanner = ScannerProvider.getInstance().getScanner();
 
     private String name = null;
     private String description = "";
@@ -83,7 +84,8 @@ public class Menu {
     private void scanChoice() {
         int choice = 1000;
         do {
-            choice = scanner.getScanner().nextInt();
+            while (!scanner.hasNextInt()) scanner.next();
+            choice = scanner.nextInt();
         } while (choice < 1 || choice > choices.size());
         choices.get(choice-1).getAction().get();
     }

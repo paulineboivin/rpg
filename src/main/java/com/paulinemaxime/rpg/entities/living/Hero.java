@@ -8,16 +8,4 @@ public class Hero extends Perso {
 		super(name, pv, pa, classe);
 	}
 
-	public String getName(){
-		return name;
-	}
-	public int getPv(){
-		return pv;
-	}
-	public int getPa(){
-		return pa;
-	}
-	
-	
-	
 }

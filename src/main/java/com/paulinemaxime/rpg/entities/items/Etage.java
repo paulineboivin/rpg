@@ -26,4 +26,8 @@ public class Etage {
 		this.monstre.add(monstre);
 	}
 
+	public void removeMonstre(Monstre m) {
+		monstre.remove(m);
+	}
+
 }

@@ -6,9 +6,9 @@ import com.paulinemaxime.rpg.entities.classes.defauts.DefaultMagicien;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultPaladin;
 import com.paulinemaxime.rpg.entities.items.Donjon;
 import com.paulinemaxime.rpg.entities.items.Etage;
-import com.paulinemaxime.rpg.entities.items.arme.Armemagique;
 import com.paulinemaxime.rpg.entities.living.Hero;
 import com.paulinemaxime.rpg.entities.living.Monstre;
+import com.paulinemaxime.rpg.entities.living.Perso;
 import com.paulinemaxime.rpg.utils.ScannerProvider;
 import com.paulinemaxime.rpg.utils.console.AdvancedConsole;
 import com.paulinemaxime.rpg.utils.console.Menu;
@@ -20,6 +20,9 @@ public class Game {
     private AdvancedConsole cmd;
     private ScannerProvider scanner;
     private ArrayList<Hero> team = new ArrayList<>();
+    private Donjon dj = new Donjon();
+    private int butin = 0;
+
     private Monstre monstre = null;
 
     public Game() {
@@ -114,7 +117,7 @@ public class Game {
         int nbr = cmd.verifInputInt(0,5);
         cmd.print("Combien de monstre voulez-vous par étage ? (maximum 10) :");
         int nbr_monstre = cmd.verifInputInt(0,10);
-        Donjon dj = new Donjon();
+
         for (int i=0; i < nbr; i++) {
             Etage etage = new Etage();
             for (int j=0; j < nbr_monstre; j++) {
@@ -132,12 +135,40 @@ public class Game {
         }
     }
 
-    private void choixAction(Hero hero) {
+    private void choixAction(Perso hero) {
         Menu menu = cmd.createMenu();
         menu.addDescription("Choisissez l'action à effectuer pour le hero -> "+hero.getName()+" :");
-        menu.addChoice("Attaquer", ()-> { cmd.print("Attaque !"); return  null; });
-        menu.addChoice("Defendre", ()-> { cmd.print("Defense !"); return  null; });
+        menu.addChoice("Attaquer", ()-> { attaque(hero); return  null; });
+        menu.addChoice("Defendre", ()-> { hero.doubleDefense(); return  null; });
         menu.print();
+    }
+
+    private void attaque(Perso hero) {
+        Perso monstre;
+        Etage etage = dj.getEtages().get(0);
+        int pa = hero.getPa();
+
+        while (pa >= hero.getArme().getPa()) {
+
+            monstre = etage.getMonstres().get(0);
+            if (monstre != null) {
+
+                int degat = 0;
+                if (degat >= monstre.getPv()) {
+                    etage.removeMonstre((Monstre) monstre);
+                    butin += Math.random()*(11)%11;
+                } else {
+                    monstre.setPv(monstre.getPv()-degat);
+                }
+                pa -= hero.getArme().getPa();
+
+            } else {
+                dj.removeEtage(etage);
+                etage = dj.getEtages().get(0);
+            }
+
+        }
+
     }
 
 }

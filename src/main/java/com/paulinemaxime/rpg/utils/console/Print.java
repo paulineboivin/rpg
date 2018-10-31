@@ -51,7 +51,7 @@ public class Print {
         if (reduce) {
             msg = reduceString(msg);
         }
-        System.out.println(msg + Color.RESET);
+        System.out.println(msg);
     }
 
     public void print(String msg) {
@@ -60,7 +60,7 @@ public class Print {
             String value = entry.getValue().toString();
             msg = msg.replaceAll(key, value);
         }
-        System.out.println(msg + Color.RESET);
+        System.out.println(msg);
     }
 
     public void print(String[] msg) {

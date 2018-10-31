@@ -50,7 +50,8 @@ public class AdvancedConsole {
     public int verifInputInt(int min, int max) {
         int result = 0;
         do {
-            result = scanner.nextInt();
+            while (!scanner.hasNextInt()) scanner.next();
+            result = (int) scanner.nextInt();
         } while ( result < min || result > max );
         return result;
     }

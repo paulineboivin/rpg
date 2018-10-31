@@ -22,6 +22,10 @@ public class Donjon {
 	public void addEtage(Etage etage) {
 		this.etage.add(etage);
 	}
+
+	public void removeEtage(Etage e) {
+		etage.remove(e);
+	}
 }
 
 
