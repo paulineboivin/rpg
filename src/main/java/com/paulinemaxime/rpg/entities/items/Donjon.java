@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Donjon {
 
-	private ArrayList<Etages> etages;
+	private ArrayList<Etage> etages;
 	private int nombreEtages; 
 	
 }

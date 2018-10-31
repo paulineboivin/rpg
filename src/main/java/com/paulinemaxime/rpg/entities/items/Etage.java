@@ -5,6 +5,6 @@ import java.util.ArrayList;
 import com.paulinemaxime.rpg.entities.living.Monstre;
 
 public class Etage {
-	private ArrayList<Monstres> monstres;
+	private ArrayList<Monstre> monstres;
 	private int NombreMonstres;
 }

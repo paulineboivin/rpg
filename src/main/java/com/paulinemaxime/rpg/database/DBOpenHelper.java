@@ -3,7 +3,9 @@ package com.paulinemaxime.rpg.database;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
@@ -18,9 +20,14 @@ public class DBOpenHelper {
 	    	dataSource.setUser("root");
 			dataSource.setPassword("");
 			dataSource.setServerName("127.0.0.1");
-			dataSource.setDatabaseName("databaserpg");
+			Statement stm;
 			try {
 				dataSource.setServerTimezone("UTC");
+				conn = dataSource.getConnection();
+				stm = conn.createStatement();
+				String sql = "CREATE DATABASE IF NOT EXISTS databaserpg";
+				stm.executeUpdate(sql);
+				dataSource.setDatabaseName("databaserpg");
 				conn = dataSource.getConnection();
 			} catch (SQLException e) {
 				e.printStackTrace();
