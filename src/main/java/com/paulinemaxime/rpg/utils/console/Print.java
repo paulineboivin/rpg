@@ -114,4 +114,18 @@ public class Print {
         out += "  §0" + percent + "%";
         print(out);
     }
+
+    public void loadingBar(double current, double max) {
+        int percent = (int) (current / max * 100);
+        String out = "";
+        for (int i=0; i < 100; i++) {
+            if (i <= percent) {
+                out+= "|";
+            } else {
+                out+= ".";
+            }
+        }
+        out += percent + "%";
+        print(out);
+    }
 }

@@ -39,6 +39,10 @@ public class AdvancedConsole {
         print.loadingBarColor(current,max);
     }
 
+    public void loadingBar(double current, double max) {
+        print.loadingBar(current, max);
+    }
+
     public Menu createMenu() {
         return new Menu();
     }

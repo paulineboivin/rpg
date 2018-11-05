@@ -1,5 +1,6 @@
 package com.paulinemaxime.rpg;
 
+import com.paulinemaxime.rpg.entities.classes.ClasseRpg;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultBarbare;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultFighter;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultMagicien;
@@ -22,6 +23,7 @@ public class Game {
     private ArrayList<Hero> team = new ArrayList<>();
     private Donjon dj = new Donjon();
     private int butin = 0;
+    private boolean end = false;
 
     private Monstre monstre = null;
 
@@ -33,7 +35,7 @@ public class Game {
         cmd = AdvancedConsole.getInstance();
         scanner = ScannerProvider.getInstance();
         createTeam();
-        //createDonjon();
+        createDonjon();
         attaqueDonjon();
     }
 
@@ -130,45 +132,132 @@ public class Game {
 
     public void attaqueDonjon() {
         cmd.print("Vous attaquez le Donjon !");
-        for (Hero hero: team) {
-            choixAction(hero);
+        while (team.size() > 0 && dj.getEtages().size() > 0) {
+            for (Hero hero : team) {
+                if (!end) {
+                    choixAction(hero);
+                }
+            }
+            if (!dj.getEtages().isEmpty())
+            for (Monstre monstre: dj.getEtages().get(0).getMonstres()) {
+                if (!end) {
+                    randAction(monstre);
+                }
+            }
         }
+        resumeDonjon();
     }
 
     private void choixAction(Perso hero) {
         Menu menu = cmd.createMenu();
         menu.addDescription("Choisissez l'action à effectuer pour le hero -> "+hero.getName()+" :");
-        menu.addChoice("Attaquer", ()-> { attaque(hero); return  null; });
+        menu.addChoice("Attaquer", ()-> { heroAttaque(hero); return  null; });
         menu.addChoice("Defendre", ()-> { hero.doubleDefense(); return  null; });
         menu.print();
     }
 
-    private void attaque(Perso hero) {
+    private void randAction(Perso monstre) {
+        Perso hero = null;
+        if (!team.isEmpty()) {
+            hero = team.get(0);
+        }
+        int pa = monstre.getPa();
+        boolean flag = true;
+
+        while (pa >= monstre.getArme().getPa() && flag) {
+
+            if (hero != null) {
+
+                int rand = (int) (Math.random()*2%2);
+                if (rand == 1) { //Attaque
+                    cmd.print("DEBUG : Attaque");
+
+                    if (!calculAttaque(monstre, hero)) {
+                        team.remove(hero);
+                    }
+                    pa -= monstre.getArme().getPa();
+
+                } else { //defense
+                    cmd.print("DEBUG : Defense");
+                    monstre.doubleDefense();
+                    flag = false;
+                }
+
+            } else {
+                flag = false;
+            }
+
+        }
+    }
+
+    private void heroAttaque(Perso hero) {
         Perso monstre;
         Etage etage = dj.getEtages().get(0);
         int pa = hero.getPa();
+        boolean flag = true;
 
-        while (pa >= hero.getArme().getPa()) {
+        while (pa >= hero.getArme().getPa() && flag) {
 
-            monstre = etage.getMonstres().get(0);
-            if (monstre != null) {
+            if (etage != null) {
 
-                int degat = 0;
-                if (degat >= monstre.getPv()) {
-                    etage.removeMonstre((Monstre) monstre);
-                    butin += Math.random()*(11)%11;
+                if (!etage.getMonstres().isEmpty()) {
+                    monstre = etage.getMonstres().get(0);
+
+                    if (!calculAttaque(hero, monstre)) {
+                        etage.removeMonstre((Monstre) monstre);
+                        butin += Math.random()*(11)%11;
+                    }
+                    pa -= hero.getArme().getPa();
+
                 } else {
-                    monstre.setPv(monstre.getPv()-degat);
+                    dj.removeEtage(etage);
+                    if (!dj.getEtages().isEmpty()) {
+                        etage = dj.getEtages().get(0);
+                    } else {
+                        flag = false;
+                    }
+
                 }
-                pa -= hero.getArme().getPa();
 
             } else {
-                dj.removeEtage(etage);
-                etage = dj.getEtages().get(0);
+                flag = false;
+                resumeDonjon();
             }
 
         }
 
+    }
+
+    private boolean calculAttaque(Perso att, Perso def) {
+        int degat = 0;
+        boolean alive = true;
+        if (att.getArme().getType().equals(def.getArmure().getType()) ) {
+            degat = def.getTotalDefense() - att.getArme().getDegat();
+            if (degat < 0) {
+                def.setTotalDefense(0);
+                def.setCurrent_pv(def.getCurrent_pv()+degat);
+            } else {
+                def.setTotalDefense(degat);
+            }
+        } else {
+            degat = att.getArme().getDegat();
+            def.setCurrent_pv(def.getCurrent_pv()-degat);
+        }
+        if (def.getCurrent_pv() < 1) {
+            alive = false;
+        }
+        return alive;
+    }
+
+    public void resumeDonjon() {
+
+        end = true;
+
+        for (Perso hero: team) {
+            cmd.print(hero.getName()+" : "+hero.getCurrent_pv()+"/"+hero.getMax_pv());
+            cmd.loadingBar((double) hero.getCurrent_pv(), (double) hero.getMax_pv());
+        }
+        cmd.print("Vous avez gagné "+butin+" pièces d'or !");
     }
 
 }
