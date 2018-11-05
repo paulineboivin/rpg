@@ -5,6 +5,8 @@ import com.paulinemaxime.rpg.entities.classes.defauts.DefaultBarbare;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultFighter;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultMagicien;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultPaladin;
+import com.paulinemaxime.rpg.entities.items.Armes;
+import com.paulinemaxime.rpg.entities.items.Armure;
 import com.paulinemaxime.rpg.entities.items.Donjon;
 import com.paulinemaxime.rpg.entities.items.Etage;
 import com.paulinemaxime.rpg.entities.living.Hero;
@@ -21,6 +23,8 @@ public class Game {
     private AdvancedConsole cmd;
     private ScannerProvider scanner;
     private ArrayList<Hero> team = new ArrayList<>();
+    private ArrayList<Armes> armes = new ArrayList<>();
+    private ArrayList<Armure> armures = new ArrayList<>();
     private Donjon dj = new Donjon();
     private int butin = 0;
     private boolean end = false;
@@ -81,29 +85,32 @@ public class Game {
         menu.addChoice("Paladin", ()-> { monstre = new Monstre(name, pv, pa, new DefaultPaladin()); return null;} );
 
         menu.print();
+        menuSelectWeapon(monstre, "Monstre");
         cmd.print("Votre monstre a bien �t� cr�� !");
 
         return monstre;
     }
 
-    public void menuSelectWeapon(Hero hero) {
+    public void menuSelectWeapon(Perso perso, String name) {
 
-        Menu menu = cmd.createMenu("Selection arme Hero", "S�lectionner une arme pour votre Hero :");
+        Menu menu = cmd.createMenu("Selection arme "+name, "S�lectionner une arme pour votre "+name+" :");
+        for (Armes arme : armes) {
+            if (perso.getClasse().isEquipable(arme)) {
+                menu.addChoice(arme.getName()+" [Degat : "+arme.getDegat()+" | Pa : "+arme.getPa()+"]", ()-> { perso.setArme(arme); return null; });
+            }
+        }
+
     }
     
-    public void menuSelectWeapon(Monstre monstre) {
+    public void menuSelectArmor(Perso perso, String name) {
 
-        Menu menu = cmd.createMenu("Selection arme Monstre", "S�lectionner une arme pour votre Monstre :");
+        Menu menu = cmd.createMenu("Selection armure "+name, "S�lectionner une armure pour votre "+name+" :");
+        for (Armure armure : armures) {
+            if (perso.getClasse().isEquipable(armure)) {
+                menu.addChoice(armure.getName()+" [Defense : "+armure.getpArmure()+"]", ()-> { perso.setArmure(armure); return null; });
+            }
+        }
     }
-
-    public void menuSelectArmor(Hero hero) {
-    	Menu exemple = cmd.createMenu();
-    	exemple.addName("Nom du menu");
-    	exemple.addDescription("Choisissez le choix qui vous convient :");
-    	exemple.addChoice("choix 1", ()-> {System.out.println(" "); return null;} );
-    }
-    
-    public void menuSelectArmor(Monstre monstre) {}
 
     public void createTeam() {
         cmd.print("Combien de héro voulez-vous créer ? (maximum 10) :");
