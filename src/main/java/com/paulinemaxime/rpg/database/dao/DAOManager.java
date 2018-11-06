@@ -58,6 +58,35 @@ public class DAOManager<T extends DBItem> {
 		return result;
 	}
 
+	public void insert(Contract contract, DTO<T> dto, String item){
+
+		StringBuilder request = new StringBuilder();
+		request.append("INSERT INTO ");
+		request.append(contract.getTable());
+		request.append(" (");
+		request.append(contract.getInsertFields());
+		request.append(") values (");
+		request.append(item);
+		request.append(")");
+
+		Statement stmt = null;
+
+		try {
+		    stmt = DBOpenHelper.getInstance().getConn().createStatement();
+            stmt.executeQuery(request.toString());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+		    try {
+		        if (stmt != null)
+		        stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
 	private void parser(DTO<T> dto, ArrayList<T> result, StringBuilder request, Statement stmt) {
 		ResultSet rs;
 		try {
@@ -76,11 +105,7 @@ public class DAOManager<T extends DBItem> {
 			}
 		}
 	}
-	
-	// the mysql insert statement https://alvinalexander.com/java/java-mysql-insert-example-preparedstatement
-    String query = " insert into databaserpg(first_name, last_name, date_created, is_admin, num_points)"
-      + " values (?, ?, ?, ?, ?)";
-	
+
 }
 
 

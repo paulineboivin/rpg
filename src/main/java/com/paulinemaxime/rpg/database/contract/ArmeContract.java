@@ -14,7 +14,7 @@ public class ArmeContract implements Contract {
 			")";
 	
 	public static final String SELECT_FIELDS = 
-			FIELDS[0] + "," + FIELDS[1] + "," + FIELDS[2] + FIELDS[3] + FIELDS[4];
+			FIELDS[0] + "," + FIELDS[1] + "," + FIELDS[2] + "," + FIELDS[3] + "," + FIELDS[4];
 	
 	public static final String INSERT_FIELDS = FIELDS[1] + "," + FIELDS[2] + "," + FIELDS[3] + "," + FIELDS[4];
 	

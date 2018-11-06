@@ -6,4 +6,5 @@ public interface Contract {
 	String[] getFields();
 	String getCreateTable();
 	String getSelectFields();
+	String getInsertFields();
 }
