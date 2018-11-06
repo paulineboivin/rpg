@@ -125,7 +125,7 @@ public class Print {
                 out+= ".";
             }
         }
-        out += percent + "%";
+        out += " " + percent + "%";
         print(out);
     }
 }
