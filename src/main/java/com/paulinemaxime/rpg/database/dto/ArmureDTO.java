@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import com.paulinemaxime.rpg.database.contract.ArmureContract;
 import com.paulinemaxime.rpg.entities.items.Armure;
+import com.paulinemaxime.rpg.entities.items.armure.Armuredefault;
 import com.paulinemaxime.rpg.entities.items.armure.Armuremagique;
 import com.paulinemaxime.rpg.entities.items.armure.Armuremixte;
 import com.paulinemaxime.rpg.entities.items.armure.Armurephysique;
@@ -45,6 +46,9 @@ public class ArmureDTO implements DTO<Armure> {
 				break;
 			case "mixte":
 				armure = new Armuremixte(name, pArmure);
+				break;
+			case "aucun":
+				armure = new Armuredefault(name, pArmure);
 				break;
 		}
 
