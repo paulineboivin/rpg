@@ -22,9 +22,7 @@ public class DAOManager<T extends DBItem> {
 		
 		StringBuilder request = new StringBuilder();
 		request.append("SELECT ");
-		request.append("(");
 		request.append(contract.getSelectFields());
-		request.append(")");
 		request.append(" FROM ");
 		request.append(contract.getTable());
 		
@@ -41,9 +39,7 @@ public class DAOManager<T extends DBItem> {
 		
 		StringBuilder request = new StringBuilder();
 		request.append("SELECT ");
-		request.append("(");
 		request.append(contract.getSelectFields());
-		request.append(")");
 		request.append(" FROM ");
 		request.append(contract.getTable());
 		request.append(" WHERE ");
@@ -73,7 +69,7 @@ public class DAOManager<T extends DBItem> {
 
 		try {
 		    stmt = DBOpenHelper.getInstance().getConn().createStatement();
-            stmt.executeQuery(request.toString());
+            stmt.executeUpdate(request.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -86,6 +82,42 @@ public class DAOManager<T extends DBItem> {
         }
 
     }
+
+    public void createTable(Contract contract) {
+		Statement stmt = null;
+
+		try {
+			stmt = DBOpenHelper.getInstance().getConn().createStatement();
+			stmt.executeUpdate(contract.getCreateTable());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (stmt != null)
+					stmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void dropTable(Contract contract) {
+		Statement stmt = null;
+
+		try {
+			stmt = DBOpenHelper.getInstance().getConn().createStatement();
+			stmt.executeUpdate("DROP TABLE IF EXISTS " + contract.getTable());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (stmt != null)
+					stmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	private void parser(DTO<T> dto, ArrayList<T> result, StringBuilder request, Statement stmt) {
 		ResultSet rs;

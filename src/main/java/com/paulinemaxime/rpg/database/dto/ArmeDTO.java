@@ -15,10 +15,14 @@ public class ArmeDTO implements DTO<Armes> {
 	public String javaToMySQL(Armes item) {
 
 		StringBuilder sqlObject = new StringBuilder();
+		sqlObject.append("'");
 		sqlObject.append(item.getName());
+		sqlObject.append("'");
 		sqlObject.append(String.valueOf(item.getDegat()));
 		sqlObject.append(String.valueOf(item.getPa()));
+		sqlObject.append("'");
 		sqlObject.append(item.getType());
+		sqlObject.append("'");
 
 		return sqlObject.toString();
 	}

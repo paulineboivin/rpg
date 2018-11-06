@@ -10,14 +10,12 @@ public class DefaultMagicien implements ClasseRpg, Magicien {
 
 	@Override
 	public String getArmorRestriction() {
-		// TODO Auto-generated method stub
-		return null;
+		return "magique";
 	}
 
 	@Override
 	public String getWeaponRestriction() {
-		// TODO Auto-generated method stub
-		return null;
+		return "magique";
 	}
 
 	@Override
@@ -28,13 +26,15 @@ public class DefaultMagicien implements ClasseRpg, Magicien {
 
 	@Override
 	public boolean isEquipable(Armes arme) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean canEquip = false;
+		if (arme.getType().equals("magique")) canEquip = true;
+		return canEquip;
 	}
 
 	@Override
 	public boolean isEquipable(Armure armure) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean canEquip = false;
+		if (armure.getType().equals("magique")) canEquip = true;
+		return canEquip;
 	}
 }

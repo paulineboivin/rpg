@@ -9,31 +9,30 @@ public class DefaultFighter implements ClasseRpg {
 
 	@Override
 	public String getArmorRestriction() {
-
-		return null;
+		return "aucun";
 	}
 
 	@Override
 	public String getWeaponRestriction() {
-
-		return null;
+		return "aucun";
 	}
 
 	@Override
 	public void fight(Perso perso) {
 		
-		
 	}
 
 	@Override
 	public boolean isEquipable(Armes arme) {
-		
-		return false;
+		boolean canEquip = false;
+		if (arme.getType().equals("aucun")) canEquip = true;
+		return canEquip;
 	}
 
 	@Override
 	public boolean isEquipable(Armure armure) {
-
-		return false;
+		boolean canEquip = false;
+		if (armure.getType().equals("aucun")) canEquip = true;
+		return canEquip;
 	}
 }

@@ -16,9 +16,13 @@ public class ArmureDTO implements DTO<Armure> {
 	public String javaToMySQL(Armure item) {
 
 		StringBuilder sqlObject = new StringBuilder();
+		sqlObject.append("'");
 		sqlObject.append(item.getName());
+		sqlObject.append("'");
 		sqlObject.append(String.valueOf(item.getpArmure()));
+		sqlObject.append("'");
 		sqlObject.append(item.getType());
+		sqlObject.append("'");
 
 		return sqlObject.toString();
 	}

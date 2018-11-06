@@ -1,6 +1,10 @@
 package com.paulinemaxime.rpg;
 
-import com.paulinemaxime.rpg.entities.classes.ClasseRpg;
+import com.paulinemaxime.rpg.database.contract.ArmeContract;
+import com.paulinemaxime.rpg.database.contract.ArmureContract;
+import com.paulinemaxime.rpg.database.dao.DAOManager;
+import com.paulinemaxime.rpg.database.dto.ArmeDTO;
+import com.paulinemaxime.rpg.database.dto.ArmureDTO;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultBarbare;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultFighter;
 import com.paulinemaxime.rpg.entities.classes.defauts.DefaultMagicien;
@@ -38,6 +42,38 @@ public class Game {
     public void init() {
         cmd = AdvancedConsole.getInstance();
         scanner = ScannerProvider.getInstance();
+
+        // Init SQL BDD
+        DAOManager dao = new DAOManager();
+
+        ArmeContract armeContract = new ArmeContract();
+        ArmeDTO armeDTO = new ArmeDTO();
+        ArmureContract armureContract = new ArmureContract();
+        ArmureDTO armureDTO = new ArmureDTO();
+
+        dao.dropTable(armeContract);
+        dao.createTable(armeContract);
+        dao.insert(armeContract, armeDTO, "'Baton du sourcier', 5, 3, 'magique'");
+        dao.insert(armeContract, armeDTO, "'Lance sortillège', 8, 5, 'magique'");
+        dao.insert(armeContract, armeDTO, "'Epée à deux mains', 8, 3, 'physique'");
+        dao.insert(armeContract, armeDTO, "'Hache du bourreau', 12, 5, 'physique'");
+        dao.insert(armeContract, armeDTO, "'Dague ensorcellé', 7, 3, 'mixte'");
+        dao.insert(armeContract, armeDTO, "'Fouet démoniaque', 10, 5, 'mixte'");
+        dao.insert(armeContract, armeDTO, "'Poings', 5, 2, 'aucun'");
+        armes.addAll(dao.selectAll(armeContract, armeDTO));
+
+        dao.dropTable(armureContract);
+        dao.createTable(armureContract);
+        dao.insert(armureContract, armureDTO, "'Cape en chantier', 3, 'magique'");
+        dao.insert(armureContract, armureDTO, "'Bouclier sacré', 6, 'magique'");
+        dao.insert(armureContract, armureDTO, "'Bouclier du captain', 4, 'physique'");
+        dao.insert(armureContract, armureDTO, "'Iron armor', 7, 'physique'");
+        dao.insert(armureContract, armureDTO, "'Culotte magique', 2, 'mixte'");
+        dao.insert(armureContract, armureDTO, "'Armure simple', 10, 'mixte'");
+        dao.insert(armureContract, armureDTO, "'Slip de bain', 1, 'aucun'");
+        armures.addAll(dao.selectAll(armureContract, armureDTO));
+
+        //Start Game
         createTeam();
         createDonjon();
         attaqueDonjon();
@@ -61,6 +97,8 @@ public class Game {
         menu.addChoice("Paladin", ()-> { team.add(new Hero(name, pv, pa, new DefaultPaladin())); return null;} );
 
         menu.print();
+        menuSelectWeapon(team.get(team.size()-1), "Hero");
+        menuSelectArmor(team.get(team.size()-1), "Hero");
         cmd.print("Votre hero à bien été créé !");
 
     }
@@ -86,30 +124,32 @@ public class Game {
 
         menu.print();
         menuSelectWeapon(monstre, "Monstre");
-        cmd.print("Votre monstre a bien �t� cr�� !");
+        menuSelectArmor(monstre, "Monstre");
+        cmd.print("Votre monstre a bien été créé !");
 
         return monstre;
     }
 
     public void menuSelectWeapon(Perso perso, String name) {
 
-        Menu menu = cmd.createMenu("Selection arme "+name, "S�lectionner une arme pour votre "+name+" :");
+        Menu menu = cmd.createMenu("Selection arme "+name, "Sélectionner une arme pour votre "+name+" :");
         for (Armes arme : armes) {
             if (perso.getClasse().isEquipable(arme)) {
                 menu.addChoice(arme.getName()+" [Degat : "+arme.getDegat()+" | Pa : "+arme.getPa()+"]", ()-> { perso.setArme(arme); return null; });
             }
         }
-
+        menu.print();
     }
     
     public void menuSelectArmor(Perso perso, String name) {
 
-        Menu menu = cmd.createMenu("Selection armure "+name, "S�lectionner une armure pour votre "+name+" :");
+        Menu menu = cmd.createMenu("Selection armure "+name, "Sélectionner une armure pour votre "+name+" :");
         for (Armure armure : armures) {
             if (perso.getClasse().isEquipable(armure)) {
                 menu.addChoice(armure.getName()+" [Defense : "+armure.getpArmure()+"]", ()-> { perso.setArmure(armure); return null; });
             }
         }
+        menu.print();
     }
 
     public void createTeam() {
@@ -177,7 +217,6 @@ public class Game {
 
                 int rand = (int) (Math.random()*2%2);
                 if (rand == 1) { //Attaque
-                    cmd.print("DEBUG : Attaque");
 
                     if (!calculAttaque(monstre, hero)) {
                         team.remove(hero);
@@ -185,7 +224,6 @@ public class Game {
                     pa -= monstre.getArme().getPa();
 
                 } else { //defense
-                    cmd.print("DEBUG : Defense");
                     monstre.doubleDefense();
                     flag = false;
                 }
@@ -240,6 +278,14 @@ public class Game {
         boolean alive = true;
         if (att.getArme().getType().equals(def.getArmure().getType()) ) {
             degat = def.getTotalDefense() - att.getArme().getDegat();
+            if (degat < 0) {
+                def.setTotalDefense(0);
+                def.setCurrent_pv(def.getCurrent_pv()+degat);
+            } else {
+                def.setTotalDefense(degat);
+            }
+        } else if (att.getArme().getType().equals("mixte") && (def.getArmure().getType().equals("physique") || def.getArmure().getType().equals("magique"))) {
+            degat = def.getTotalDefense() - (att.getArme().getDegat() / 2);
             if (degat < 0) {
                 def.setTotalDefense(0);
                 def.setCurrent_pv(def.getCurrent_pv()+degat);

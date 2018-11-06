@@ -10,14 +10,12 @@ public class DefaultBarbare implements ClasseRpg, Barbare {
 
 	@Override
 	public String getArmorRestriction() {
-		// TODO Auto-generated method stub
-		return null;
+		return "physique";
 	}
 
 	@Override
 	public String getWeaponRestriction() {
-		// TODO Auto-generated method stub
-		return null;
+		return "physique";
 	}
 
 	@Override
@@ -28,13 +26,15 @@ public class DefaultBarbare implements ClasseRpg, Barbare {
 
 	@Override
 	public boolean isEquipable(Armes arme) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean canEquip = false;
+		if (arme.getType().equals("physique")) canEquip = true;
+		return canEquip;
 	}
 
 	@Override
 	public boolean isEquipable(Armure armure) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean canEquip = false;
+		if (armure.getType().equals("physique")) canEquip = true;
+		return canEquip;
 	}
 }

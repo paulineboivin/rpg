@@ -5,10 +5,10 @@ public class ArmureContract implements Contract {
 	public static final String TABLE = "armure";
 	public static final String[] FIELDS = { "id", "name", "pArmure", "type"};
 	public static final String CREATE_TABLE =
-			"CREATE TABLE " + TABLE + "(" + 
+			"CREATE TABLE IF NOT EXISTS " + TABLE + "(" +
 			FIELDS[0] + " INT " + " NOT NULL " + " PRIMARY KEY AUTO_INCREMENT " + "," + 
-			FIELDS[1] + " VARCHAR(255) " + " NOT NULL " +
-			FIELDS[2] + " INT " + " NOT NULL " +
+			FIELDS[1] + " VARCHAR(255) " + " NOT NULL " + "," +
+			FIELDS[2] + " INT " + " NOT NULL " + "," +
 			FIELDS[3] + " VARCHAR(255) " + " NOT NULL " +
 			")";
 	

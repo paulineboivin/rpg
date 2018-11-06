@@ -10,14 +10,12 @@ public class DefaultPaladin implements ClasseRpg, Paladin {
 
 	@Override
 	public String getArmorRestriction() {
-		// TODO Auto-generated method stub
-		return null;
+		return "mixte";
 	}
 
 	@Override
 	public String getWeaponRestriction() {
-		// TODO Auto-generated method stub
-		return null;
+		return "mixte";
 	}
 
 	@Override
@@ -28,13 +26,15 @@ public class DefaultPaladin implements ClasseRpg, Paladin {
 
 	@Override
 	public boolean isEquipable(Armes arme) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean canEquip = false;
+		if (arme.getType().equals("mixte")) canEquip = true;
+		return canEquip;
 	}
 
 	@Override
 	public boolean isEquipable(Armure armure) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean canEquip = false;
+		if (armure.getType().equals("mixte")) canEquip = true;
+		return canEquip;
 	}
 }
